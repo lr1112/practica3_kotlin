@@ -11,5 +11,7 @@ data class Personas(
     val correo: String,
     val direccion: String,
     val telefono: String,
+    val ocupacion: String,
+    val salario: Float
 )
 

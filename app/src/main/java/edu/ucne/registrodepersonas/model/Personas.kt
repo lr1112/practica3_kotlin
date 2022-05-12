@@ -4,11 +4,11 @@ import androidx.room.PrimaryKey
 
 data class Personas(
     @PrimaryKey(autoGenerate = true)
-    val PersonaId: Int,
-    val Nombre: String,
-    val Apellido: String,
-    val Correo: String,
-    val Direccion: String,
-    val Telefono: String,
+    val personaId: Int,
+    val nombre: String,
+    val apellido: String,
+    val correo: String,
+    val direccion: String,
+    val telefono: String,
 )
 

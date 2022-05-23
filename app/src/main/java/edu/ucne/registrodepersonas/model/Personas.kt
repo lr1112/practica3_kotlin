@@ -2,7 +2,8 @@ package edu.ucne.registrodepersonas.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-@Entity(tableName = "personas_table")
+
+@Entity(tableName = "Personas")
 data class Personas(
     @PrimaryKey(autoGenerate = true)
     val personaId: Int,
@@ -12,6 +13,6 @@ data class Personas(
     val direccion: String,
     val telefono: String,
     val ocupacion: String,
-    val salario: Float
+    val salario: String
 )
 

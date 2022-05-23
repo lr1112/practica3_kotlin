@@ -3,22 +3,28 @@ package edu.ucne.registrodepersonas.data
 
 import androidx.room.*
 import edu.ucne.registrodepersonas.model.Personas
+import kotlinx.coroutines.flow.Flow
 
 
 @Dao
 interface PersonasDao {
 
     @Insert (onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertar (personas: Personas)
+    fun insertar (personas: Personas)
 
-    @Query("SELECT * FROM personas_table ORDER BY nombre DESC")
-    suspend fun getList():List<Personas>
+   /* @Query("SELECT * FROM Personas ORDER BY nombre DESC")
+    fun getLista(): Flow<List<Personas>>*/
 
     @Delete
     suspend fun eliminar (personas: Personas)
 
-    @Query("SELECT * FROM PERSONAS_TABLE WHERE personaId= personaId")
-    suspend fun buscar(personas: Personas)
+    @Query("""
+        
+    SELECT * 
+    FROM Personas 
+    WHERE personaId =:personaId
+    """)
+    fun buscar(personaId: Int): Flow<Personas>
 
 
 }

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Registro de personas</string>
+    <string name="nombre">nombre</string>
+    <string name="apellido">apellido</string>
+    <string name="telefono">telefono</string>
+    <string name="ocupacion">ocupacion</string>
+    <string name="correo">correo</string>
+    <string name="salario">salario</string>
 </resources>

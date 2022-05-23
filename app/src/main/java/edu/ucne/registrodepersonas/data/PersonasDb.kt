@@ -9,5 +9,7 @@ import edu.ucne.registrodepersonas.model.Personas
 )
 abstract class PersonasDb: RoomDatabase() {
 
-        abstract fun getPersonasDao():PersonasDao
+    abstract val personasDao: PersonasDao
+
+
 }

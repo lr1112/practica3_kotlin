@@ -12,8 +12,11 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class PersonasViewModel @Inject constructor(val personasDao: PersonasDao): ViewModel() {
+class PersonasViewModel @Inject constructor(
+    val personasDao: PersonasDao): ViewModel() {
+
     private val _guardado = MutableLiveData(false)
+
     val guardado: LiveData<Boolean> get() = _guardado
 
     fun guardar(personas: Personas){

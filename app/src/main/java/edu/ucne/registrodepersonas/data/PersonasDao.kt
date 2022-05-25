@@ -3,7 +3,7 @@ package edu.ucne.registrodepersonas.data
 
 import androidx.room.*
 import edu.ucne.registrodepersonas.model.Personas
-import kotlinx.coroutines.flow.Flow
+
 
 
 @Dao
@@ -24,7 +24,7 @@ interface PersonasDao {
     FROM Personas 
     WHERE personaId =:personaId
     """)
-    fun buscar(personaId: Int): Flow<Personas>
+    fun buscar(personaId: Int): List<Personas>
 
 
 }

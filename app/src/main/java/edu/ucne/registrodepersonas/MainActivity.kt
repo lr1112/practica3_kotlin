@@ -32,12 +32,14 @@ class MainActivity : AppCompatActivity() {
                 binding.salario.text.toString()
 
             ))
+
         }
         personasViewModel.guardado.observe(this){
             if(it){
                 Snackbar.make(binding.nombre, "Guardado",Snackbar.LENGTH_LONG).show()
             }
         }
+
     }
 
 

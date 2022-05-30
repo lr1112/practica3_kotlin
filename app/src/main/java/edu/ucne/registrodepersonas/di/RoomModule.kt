@@ -27,6 +27,7 @@ object RoomModule {
             .fallbackToDestructiveMigration()
             .build()
     }
+    @Singleton
     @Provides
     fun providePersonasDao(personasDb: PersonasDb): PersonasDao{
         return personasDb.personasDao

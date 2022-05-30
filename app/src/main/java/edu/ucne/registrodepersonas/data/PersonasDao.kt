@@ -16,10 +16,10 @@ interface PersonasDao {
        SELECT * 
        FROM Personas 
        """)
-    fun getLista(): Flow<List<Personas>>
+    fun getLista(): List<Personas>
 
-    @Delete
-    suspend fun eliminar (personas: Personas)
+    @Query("DELETE FROM Personas")
+    suspend fun eliminar ()
 
     @Query("""
         
